@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center>
+    <h1>Tic - Tac - Toe using MINIMAX ALGORITHM</h1>
+    <br>
+    <h2>User plays first. Please Choose the level of the AI: </h2>
+    <br>
+    <button id="blind" onclick="(function() {
+        level = 0;
+        document.getElementById('board').style.visibility = 'visible';
+    })();">Newbie</button>
+    <button id="average" onclick="(function() {
+        level = 1;
+        document.getElementById('board').style.visibility = 'visible';
+    })();">Average</button>
+    <button id="gawd" onclick="(function() {
+        level = 2;
+        document.getElementById('board').style.visibility = 'visible';
+    })();">Gawd</button>
+    <br>
+    <button id="refresh" onclick="(function() {
+      location.reload(true);
+    })();">New Game</button>
+    <div id="board">
+        <div class="square" id = "sq0" onclick="makeMove(this)"></div>
+        <div class="square" id = "sq1" onclick="makeMove(this)"></div>
+        <div class="square" id = "sq2" onclick="makeMove(this)"></div>
+        <br>
+        <div class="square" id = "sq3" onclick="makeMove(this)"></div>
+        <div class="square" id = "sq4" onclick="makeMove(this)"></div>
+        <div class="square" id = "sq5" onclick="makeMove(this)"></div>
+        <br>
+        <div class="square" id = "sq6" onclick="makeMove(this)"></div>
+        <div class="square" id = "sq7" onclick="makeMove(this)"></div>
+        <div class="square" id = "sq8" onclick="makeMove(this)"></div>
+    </div>
+    <div id="footer"></div>
+</center>
+
+<script src="minimax.js"></script>
+</body>
+</html>
